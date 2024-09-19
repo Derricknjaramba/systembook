@@ -6,7 +6,7 @@ const Help = () => {
     return (
         <div>
             <Navbar />
-            <h1 className="text-2xl font-bold text-center my-4">need help ?</h1>
+            <h1 className="text-2xl font-bold text-center my-4">help </h1>
             <HelpForm />
         </div>
     );
