@@ -1,27 +1,30 @@
+// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import UserDashboard from './pages/UserDashboard';
-import BooksOnSale from './pages/BooksOnSale';
-import BooksToBorrow from './pages/BooksToBorrow';
-import BorrowedBooks from './pages/BorrowedBooks';
-import PurchasedBooks from './pages/PurchasedBooks';
-import Feedback from './pages/Feedback';
-import Help from './pages/Help';
+import AdminDashboard from './components/AdminDashboard';
+import ManagePurchasedBooks from './components/ManagePurchasedBooks';
+import ManageBorrowedBooks from './components/ManageBorrowedBooks';
+import AddBook from './components/AddBook';
+import RemoveBook from './components/RemoveBook';
+import LandingPage from './pages/LandingPage';
+import RestrictUser from './components/RestrictUser';
+
 
 const App = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<UserDashboard />} />
-                <Route path="/books-on-sale" element={<BooksOnSale />} />
-                <Route path="/books-to-borrow" element={<BooksToBorrow />} />
-                <Route path="/borrowed-books" element={<BorrowedBooks />} />
-                <Route path="/purchased-books" element={<PurchasedBooks />} />
-                <Route path="/feedback" element={<Feedback />} />
-                <Route path="/help" element={<Help />} />
-            </Routes>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+      
+        <Route path="/manage-purchased-books" element={<ManagePurchasedBooks />} />
+        <Route path="/manage-borrowed-books" element={<ManageBorrowedBooks />} />
+        <Route path="/add-book" element={<AddBook />} />
+        <Route path="/remove-book" element={<RemoveBook />} />
+        <Route path="/restrict-user" element={<RestrictUser />} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
